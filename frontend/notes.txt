@@ -1,0 +1,39 @@
+ nullish coalescing operator ?? is used for defensive coding, so that it will not throws and error or crash the web
+ the same as optional chaining which is single ?
+ both are to check left side is nullish or undefined
+
+ while ternary oeprator ahve the same look but always comes with ? and :, this used to comaparing and conditions
+ which checks the (statemnet)? whether true or false, and if true will return leftside: if false will return :rightside
+
+
+
+
+
+
+
+we also use expression functions a lot because there's a reasons
+
+there's exist 3 type of functions that is declaration, declaration+assignment, expression
+arrow function is the same as expression just a shorter version so its a expression type
+
+so the only type u should be using is declaration or expression as declaration+assignment have too many cons 
+like memory efficient(theres exist 2 callers variable), can be redeclared and undpredictable blockscope, but it is 
+hoisted(the good one)
+
+and the time u should be using definition is when u want to take advantages of the hoisting ONLY 
+as it also have the same cons like declaration+assignment, which is can be redeclared and undpredictable blockscope, 
+but the only good things about function declaration is it is hoisted and memory efiicient, as its have one callers
+
+and the time u should be using expression is when u want for most of times because it haves:
+memory efficient, can't be declared(less chance of mistakes), predictable block scope, can only exist in
+block scope if u make it block scope (unlike definition, its inconsistent), and the only bad side is not hoisted,
+so u need to assign first and call after.
+
+
+
+
+
+
+we also use template strings for more efficient codes and cleaner codes
+as when using template strings, u can call variable directly, if not using template strings, u need longer code 
+to call the variable.

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Manager</title>
+    <link rel="stylesheet" href="styling.css">
+    <script defer src="app.js"></script>
+</head>
+
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div>
+                <p class="eyebrow">Student Records</p>
+                <h1>Students Manager</h1>
+                <p class="subtext">Manage students with a clean, simple UI.</p>
+            </div>
+            <div class="header-actions">
+                <button id="refreshBtn" class="btn btn-secondary" type="button">Refresh</button>
+            </div>
+        </header>
+
+        <section class="stats" id="stats">
+            <div class="stat-card">
+                <p class="stat-label">Total Students</p>
+                <p class="stat-value" id="statTotal">0</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-label">Average Age</p>
+                <p class="stat-value" id="statAvgAge">-</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-label">Newest Student</p>
+                <p class="stat-value" id="statNewest">-</p>
+            </div>
+        </section>
+
+        <main class="content">
+            <section class="panel">
+                <div class="panel-header">
+                    <h2>Students</h2>
+                    <div class="panel-actions">
+                        <input id="searchInput" class="input" type="search" placeholder="Search by name or email" />
+                        <select id="sortSelect" class="select">
+                            <option value="name-asc">Name A-Z</option>
+                            <option value="name-desc">Name Z-A</option>
+                            <option value="age-asc">Age ↑</option>
+                            <option value="age-desc">Age ↓</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Age</th>
+                                <th>Date of Birth</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentsBody">
+                            <tr>
+                                <td colspan="5" class="empty">No students yet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <aside class="panel">
+                <div class="panel-header">
+                    <h2 id="formTitle">Add Student</h2>
+                    <button id="resetBtn" class="btn btn-secondary" type="button">Reset</button>
+                </div>
+
+                <form id="studentForm" class="form">
+                    <input type="hidden" id="studentId" />
+
+                    <label class="label" for="nameInput">Full Name</label>
+                    <input id="nameInput" class="input" type="text" placeholder="Jane Doe" required />
+
+                    <label class="label" for="emailInput">Email</label>
+                    <input id="emailInput" class="input" type="email" placeholder="jane@example.com" required />
+
+                    <label class="label" for="ageInput">Age</label>
+                    <input id="ageInput" class="input" type="number" min="1" max="120" placeholder="19" required />
+
+                    <label class="label" for="dobInput">Date of Birth</label>
+                    <input id="dobInput" class="input" type="date" required />
+
+                    <button class="btn" type="submit" id="submitBtn">Add Student</button>
+                </form>
+
+                <div class="info-card">
+                    <h3>Selected Student</h3>
+                    <div id="selectedStudent" class="info-content">
+                        <p>Select a student to view details.</p>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
