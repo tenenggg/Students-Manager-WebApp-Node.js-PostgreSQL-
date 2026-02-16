@@ -41,7 +41,7 @@ let students = [];
 let activeStudent = null;
 ```
 - **What it does**: Initializes two variables that will hold the "state" of our application.
-- **`students`**: An empty array `[]` that will store the list of student objects we receive from the backend.
+- **`students`**: An empty array `[]` that will store the list of student objects we receive from the backend. This method is called state management, which is a way to manage the data that is displayed on the screen and the data that is sent to the backend, it is later used at other functions.
 - **`activeStudent`**: A variable set to `null` initially. It will store the student object currently being edited. If it is `null`, it means we are in "Add Mode". If it has data, we are in "Edit Mode".
 
 ---

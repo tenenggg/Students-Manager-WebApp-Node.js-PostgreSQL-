@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
 
 <body>
     <div class="page">
-        <header class="header">
+        <header class="header"> <!-- Header section containing the title and refresh button -->
             <div>
                 <p class="eyebrow">Student Records</p>
                 <h1>Students Manager</h1>
@@ -23,6 +24,7 @@
         </header>
 
         <section class="stats" id="stats">
+            <!-- Statistics section showing total students, average age, and newest student -->
             <div class="stat-card">
                 <p class="stat-label">Total Students</p>
                 <p class="stat-value" id="statTotal">0</p>
@@ -37,13 +39,13 @@
             </div>
         </section>
 
-        <main class="content">
+        <main class="content"> <!-- Main content area containing the table of students list and the student form -->
             <section class="panel">
                 <div class="panel-header">
                     <h2>Students</h2>
-                    <div class="panel-actions">
+                    <div class="panel-actions"> <!-- Panel actions containing the search input and sort select -->
                         <input id="searchInput" class="input" type="search" placeholder="Search by name or email" />
-                        <select id="sortSelect" class="select">
+                        <select id="sortSelect" class="select"> <!-- Select dropdown for sorting the table -->
                             <option value="name-asc">Name A-Z</option>
                             <option value="name-desc">Name Z-A</option>
                             <option value="age-asc">Age ↑</option>
@@ -52,7 +54,7 @@
                     </div>
                 </div>
 
-                <div class="table-wrap">
+                <div class="table-wrap"> <!-- Table wrap containing the table of students -->
                     <table class="table">
                         <thead>
                             <tr>
@@ -66,6 +68,7 @@
                         <tbody id="studentsBody">
                             <tr>
                                 <td colspan="5" class="empty">No students yet.</td>
+                                <!-- Default message when no students are available, if there are students, this message will be replaced -->
                             </tr>
                         </tbody>
                     </table>
@@ -76,9 +79,10 @@
                 <div class="panel-header">
                     <h2 id="formTitle">Add Student</h2>
                     <button id="resetBtn" class="btn btn-secondary" type="button">Reset</button>
+                    <!-- Button to reset the form fields to their initial values -->
                 </div>
 
-                <form id="studentForm" class="form">
+                <form id="studentForm" class="form"> <!-- Form to add or update student information -->
                     <input type="hidden" id="studentId" />
 
                     <label class="label" for="nameInput">Full Name</label>
@@ -94,10 +98,12 @@
                     <input id="dobInput" class="input" type="date" required />
 
                     <button class="btn" type="submit" id="submitBtn">Add Student</button>
+                    <!-- Button to submit the form and add or update a student -->
                 </form>
 
                 <div class="info-card">
                     <h3>Selected Student</h3>
+                    <!-- Card displaying details of the selected student, under the form , at the right side -->
                     <div id="selectedStudent" class="info-content">
                         <p>Select a student to view details.</p>
                     </div>
@@ -107,5 +113,7 @@
     </div>
 
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <!-- Toast notification for user feedback, appears temporarily at the bottom of the screen when an action is performed -->
 </body>
+
 </html>

@@ -39,3 +39,19 @@ model -> controller -> response
 -) .env (environment variables)
 - Stores secrets and config (DB host, user, password, port, database name).
 - Loaded at startup so db.js and other modules can read them.
+
+
+
+
+
+Backend Server(NodeJS) coding setup steps:
+
+1) make db.js first
+2) make .env file
+3) make model file
+4) make controller file
+5) make route file
+6) make server.js file
+7) run npm init -y
+8) run npm install express pg dotenv
+9) run npm start
