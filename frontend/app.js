@@ -110,7 +110,7 @@ const updateStats = () => {                 // update summary cards, like total 
 
     // ?? is nullish coalescing operator, ? : is ternary operator, and ?. is optional chaining operator
     // ?? is used to check if the property is null or undefined, if not it returns the value                                              (condition) ?? (if null or undefined do this, if not return the value)
-    // ? : is to check if the property is null or undefined, if it is, it returns the right side                                          (condition) ? (true do this) : (false, or  do this)
+    // ? : is to give choice, of true or false                                                                                            (condition) ? (true do this) : (false, or  do this)
     // ?. is used to check if the property is null or undefined, if its not, access the property                                          (condition) ?. (if not null or undefined, access the property) , the ?. must be followed by a "." which is a property accessor
 
     // in code above it first check newest null or undefined, if not it returns newest.name 
@@ -119,6 +119,10 @@ const updateStats = () => {                 // update summary cards, like total 
     // The Ternary Operator (? :) acts as a concise shortcut for if-else statements
     // The Nullish Coalescing Operator (??) provides a defensive coding mechanism similar to error handling, just to check null or undefined before proceeding
     // The Optional Chaining Operator (?.) provides a defensive coding mechanism similar to error handling but involves accessing properties of an object, check if the object is null or undefined before accessing its properties
+
+
+    // to be more simplified ternary operator is used when u have to make 2 important choices
+    // optional chaining and nullish coalescing operator is used when to check value existence, for defensive coding
 };
 
 
